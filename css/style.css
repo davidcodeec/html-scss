@@ -5,6 +5,7 @@ html, body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 body {
@@ -13,17 +14,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer";
-}
-body header {
-  grid-area: header;
-}
-body main {
-  grid-area: main;
-}
-body footer {
-  grid-area: footer;
-  text-align: center;
 }
 
 .btn-yellow {
@@ -71,15 +61,25 @@ header {
   padding: 16px;
 }
 header .container {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
-  gap: 70px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "logo menu-bars";
+}
+@media (min-width: 992px) {
+  header .container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo menu social-media" "logo main-menu btn-login";
+  }
+}
+header .container .logo {
+  grid-area: logo;
 }
 header .container .menu-bars {
-  border: none;
+  grid-area: menu-bars;
   font-size: 25px;
   background-color: transparent;
+  border: none;
 }
 @media (min-width: 992px) {
   header .container .menu-bars {
@@ -87,8 +87,8 @@ header .container .menu-bars {
   }
 }
 header .container .menu {
+  grid-area: menu;
   display: none;
-  flex: 1;
 }
 @media (min-width: 992px) {
   header .container .menu {
@@ -128,44 +128,63 @@ header .container .menu .top-menu .contact-information .content-box i {
 header .container .menu .top-menu .contact-information .content-box.last {
   border: none;
 }
-header .container .menu .top-menu .social-media a {
-  color: #191919;
-  font-size: 1, 3rem;
-  margin-left: 10px;
+header .container .social-media {
+  grid-area: social-media;
+  display: none;
 }
-header .container .menu .top-menu .social-media a:hover {
-  color: #7c7c7c;
+@media (min-width: 992px) {
+  header .container .social-media {
+    display: block;
+  }
+  header .container .social-media a {
+    color: #191919;
+    font-size: 1, 3rem;
+    margin-left: 10px;
+  }
+  header .container .social-media a:hover {
+    color: #7c7c7c;
+  }
 }
-header .container .menu .main-menu {
-  display: flex;
+header .container .main-menu {
+  display: none;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
 }
-header .container .menu .main-menu nav a {
-  display: inline-block;
-  color: #191919;
-  text-decoration: none;
-  margin-right: 35px;
-  position: relative;
+@media (min-width: 992px) {
+  header .container .main-menu {
+    display: none;
+  }
+  header .container .main-menu nav a {
+    display: inline-block;
+    color: #191919;
+    text-decoration: none;
+    margin-right: 35px;
+    position: relative;
+  }
+  header .container .main-menu nav a.active::after, header .container .main-menu nav a:hover::after {
+    content: "";
+    position: absolute;
+    font-weight: 500;
+    height: 2px;
+    width: 15px;
+    background-color: #191919;
+    left: 50%;
+    bottom: -3px;
+    transform: translate(calc(50% - 15px));
+  }
+  header .container .main-menu nav a:hover {
+    font-weight: 800;
+  }
 }
-header .container .menu .main-menu nav a.active::after, header .container .menu .main-menu nav a:hover::after {
-  content: "";
-  position: absolute;
-  font-weight: 500;
-  height: 2px;
-  width: 15px;
-  background-color: #191919;
-  left: 50%;
-  bottom: -3px;
-  transform: translate(calc(50% - 15px));
+header .container .btn-login {
+  grid-area: btn-login;
+  display: none;
 }
-header .container .menu .main-menu nav a:hover {
-  font-weight: 800;
-}
-header .container .menu .main-menu .btn-login {
-  padding-top: 12px;
-  padding-bottom: 12px;
+@media (min-width: 992px) {
+  header .container .btn-login {
+    display: block;
+  }
 }
 
 .showcase {
@@ -412,6 +431,7 @@ header .container .menu .main-menu .btn-login {
 }
 
 footer {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
