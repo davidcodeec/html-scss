@@ -103,6 +103,23 @@ body {
   align-items: center;
 }
 
+.section-title {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .section-title {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+}
+.section-title h2 {
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+}
+
 header {
   background-color: #F0EFE9;
   padding: 16px;
@@ -307,144 +324,112 @@ header .container .btn-login {
   font-weight: 800;
 }
 
-.contact-menu-section .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.article-news-section {
+  background-color: #FFFFFF;
 }
-@media (min-width: 1200px) {
-  .contact-menu-section .container {
-    text-align: left;
-  }
-}
-.contact-menu-section .container .content {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-.contact-menu-section .container .content .contact-menu {
-  display: flex;
-  flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-.contact-menu-section .container .content .contact-menu .contact-menu-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  width: 420px;
-  height: 206px;
-  background-color: #ffffff;
-  border: 1px solid RGBA(25, 25, 25, 0.2);
-  position: relative;
-}
-.contact-menu-section .container .content .contact-menu .contact-menu-card i {
-  /* border: 8px solid black; */
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  /* column-gap: 30px; */
-  /* background: #191919;  */
-  position: relative;
-  right: 20px;
-  bottom: 20px;
-}
-.contact-menu-section .container .content .contact-menu .contact-menu-card .contact-menu-card-text {
+.article-news-section .container {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 100px;
 }
-.contact-menu-section .container .content .contact-menu .contact-menu-card .contact-menu-card-text h3 {
-  line-height: 17px;
+.article-news-section .container .image-spacing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  /* position: relative; */
+}
+.article-news-section .container .image-spacing .image-spacing-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.article-news-section .container .image-spacing .image-spacing-text .date {
+  position: absolute;
+  background-color: #f9d783;
+  width: 70px;
+  height: 70px;
+  top: 20px;
+  left: 20px;
+}
+.article-news-section .container .image-spacing .image-spacing-text img {
+  width: 90%;
+}
+.article-news-section .container .image-spacing .image-spacing-text h3 {
   color: #191919;
   font-weight: 700;
   font-family: "DM Sans";
+  width: 80%;
 }
-.contact-menu-section .container .content .contact-menu .contact-menu-card .contact-menu-card-text h3 p {
-  line-height: 14px;
-  color: #191919;
+.article-news-section .container .image-spacing .image-spacing-text p {
+  color: #6a6c71;
   font-weight: 400;
   font-family: "Inter";
+  width: 90%;
 }
-
-.message-section {
-  background-color: #FFFFFF;
-}
-.message-section .container {
-  background-color: #f0efe9;
-  width: 1320px;
-}
-.message-section .container .content {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-.message-section .container .content .message-items {
-  display: flex;
-  flex-direction: column;
-  width: 1021px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 100px;
-  margin-top: 100px;
-}
-.message-section .container .content .message-items .message-text {
-  padding: 20px;
-}
-.message-section .container .content .message-items .message-text h3 {
-  color: #191919;
-  font-weight: 700;
-  font-family: "DM Sans";
-  font-size: 45px;
-}
-.message-section .container .content .message-items .message-btns {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-.message-section .container .content .message-items .message-btns .searchbox {
-  background-color: #FFFFFF;
+.article-news-section .container .number-boxes {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
-  padding: 10px 20px;
-  border: 1px solid black;
-  width: 100%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.message-section .container .content .message-items .message-btns .searchbox input {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 12px;
-  margin-left: 5px;
-  width: 100%;
+.article-news-section .container .number-boxes .boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #191919;
 }
-.message-section .container .content .message-items .message-btns .message-textarea {
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  padding: 10px 20px;
-  border: 1px solid black;
-  width: 100%;
-  resize: none;
+.article-news-section .container .number-boxes .boxes.active {
+  background-color: #191919;
+  color: #FFFFFF;
 }
-.message-section .container .content .message-items .message-btns .btn-yellow {
-  width: 100%;
+.article-news-section .container .number-boxes .boxes:hover {
+  background-color: #191919;
+  color: #FFFFFF;
 }
 
-.map-section {
-  background-color: #FFFFFF;
+.newsletter {
+  background-color: #F0EFE9;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.map-section .content {
-  padding-top: 60px;
-  text-align: center;
+.newsletter .newsletter-background-lines {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
 }
-.map-section .content .map img {
-  width: 100%;
+.newsletter .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter .container h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+}
+.newsletter .container form input {
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid rgba(25, 25, 25, 0.1);
+  margin-right: 20px;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 16px;
 }
 
 footer .footer-section {
