@@ -455,11 +455,11 @@ header .container .btn-login {
 .features {
   background-color: #ffffff;
   font-family: "DM Sans", sans-serif;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .features .container {
   display: grid;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
   padding-top: 40px;
   grid-template-columns: repeat(1, 1fr 1fr);
   row-gap: 50px;
