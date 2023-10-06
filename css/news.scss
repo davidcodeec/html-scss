@@ -27,6 +27,7 @@ body{
     font-weight: 600;
     font-size: 16px;
     border-radius: 25px;
+    transition: background-color 0.2s ease-in-out;
 
         i{
             margin-left: 8px;
@@ -49,6 +50,7 @@ body{
     font-weight: 600;
     font-size: 16px;
     border-radius: 25px;
+    transition: background-color 0.2s ease-in-out;
 
     i {
         margin-left: 8px;
@@ -71,6 +73,7 @@ body{
     font-weight: 600;
     font-size: 16px;
     border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
 
     i {
         margin-left: 5px;
@@ -93,6 +96,7 @@ body{
     font-weight: 600;
     font-size: 16px;
     border-radius: 25px;
+    transition: background-color 0.2s ease-in-out;
 
     i {
         margin-left: 8px;
@@ -105,6 +109,7 @@ body{
         color: #F0EFE9;
     }
 }
+
 
 .center-content{
     display: flex;

@@ -26,6 +26,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-yellow i {
   margin-left: 8px;
@@ -46,10 +47,11 @@ body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-black i {
   margin-left: 8px;
-  font-size: 0, 2em;
+  font-size: 0, 9em;
 }
 .btn-black:hover {
   background-color: #FFFFFF;
@@ -66,6 +68,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-play i {
   margin-left: 5px;
@@ -86,6 +89,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-transparent i {
   margin-left: 8px;
